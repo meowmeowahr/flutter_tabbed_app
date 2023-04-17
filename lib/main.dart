@@ -85,18 +85,23 @@ class _HomeWidgetState extends State<HomeWidget>
             tabs: const <Widget>[
               Tab(
                 icon: Icon(Icons.flag),
+                text: "Tab 1",
               ),
               Tab(
                 icon: Icon(Icons.face),
+                text: "Tab 2",
               ),
               Tab(
                 icon: Icon(Icons.bolt),
+                text: "Tab 3",
               ),
               Tab(
                 icon: Icon(Icons.radar),
+                text: "Tab 4",
               ),
               Tab(
                 icon: Icon(Icons.air),
+                text: "Tab 5",
               ),
             ],
           ),
