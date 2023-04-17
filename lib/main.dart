@@ -114,30 +114,35 @@ class _HomeWidgetState extends State<HomeWidget>
               icon: Icons.flag,
               onNext: () => nextTab(),
               onPrev: () => prevTab(),
+              length: 5,
             ),
             PageTestWidget(
               index: 2,
               icon: Icons.face,
               onNext: () => nextTab(),
               onPrev: () => prevTab(),
+              length: 5,
             ),
             PageTestWidget(
               index: 3,
               icon: Icons.bolt,
               onNext: () => nextTab(),
               onPrev: () => prevTab(),
+              length: 5,
             ),
             PageTestWidget(
               index: 4,
               icon: Icons.radar,
               onNext: () => nextTab(),
               onPrev: () => prevTab(),
+              length: 5,
             ),
             PageTestWidget(
               index: 5,
               icon: Icons.air,
               onNext: () => nextTab(),
               onPrev: () => prevTab(),
+              length: 5,
             ),
           ],
         ),
@@ -153,12 +158,14 @@ class PageTestWidget extends StatelessWidget {
     required this.icon,
     required this.onNext,
     required this.onPrev,
+    required this.length,
   });
 
   final int index;
   final IconData? icon;
   final Function()? onNext;
   final Function()? onPrev;
+  final int length;
 
   @override
   Widget build(BuildContext context) {
@@ -177,12 +184,12 @@ class PageTestWidget extends StatelessWidget {
             children: [
               const SizedBox(width: 12),
               ElevatedButton(
-                onPressed: onPrev,
+                onPressed: index == 1 ? null : onPrev,
                 child: const Text("Back"),
               ),
               const Spacer(),
               ElevatedButton(
-                onPressed: onNext,
+                onPressed: index == length ? null : onNext,
                 child: const Text("Next"),
               ),
               const SizedBox(width: 12),
