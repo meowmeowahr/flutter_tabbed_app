@@ -175,15 +175,17 @@ class PageTestWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(width: 12),
               ElevatedButton(
                 onPressed: onPrev,
                 child: const Text("Back"),
               ),
-              const SizedBox(width: 48),
+              const Spacer(),
               ElevatedButton(
                 onPressed: onNext,
                 child: const Text("Next"),
               ),
+              const SizedBox(width: 12),
             ],
           ),
           const SizedBox(height: 12),
